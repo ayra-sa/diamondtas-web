@@ -24,6 +24,9 @@ jobs:
     - name: Build Application
       run: npm run build
 
+    - name: Verify Build Directory
+      run: ls -la dist/
+
     - name: Deploy to FTP
       env:
         FTP_HOST: ${{ secrets.FTP_HOST }}
@@ -36,6 +39,7 @@ jobs:
         echo "FTP connection successful. Starting upload..."
         lftp -e "
           set ftp:ssl-allow no;
+          set mirror:verbose yes;
           mirror -R dist/ /public_html/;
           bye;
         " -u $FTP_USERNAME,$FTP_PASSWORD $FTP_HOST
