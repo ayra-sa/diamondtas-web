@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Pacifico&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* * {
+  border: 1px solid red;
+} */
+
+/* @font-face {
+  font-family: "Dancing Script", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-optical-sizing: auto;
+  src: url("/fonts/Dancing_Script/DancingScript-Regular.woff2") format('woff2');
+}
+@font-face {
+  font-family: "Dancing Script", serif;
+  font-style: normal;
+  font-weight: 600;
+  font-optical-sizing: auto;
+  src: url("/fonts/Dancing_Script/DancingScript-SemiBold.ttf") format('truetype');
+} */
+@layer base {
+  body {
+    @apply font-dosis
+  }
+  @font-face {
+    font-family: "Dosis", serif;
+    font-style: normal;
+    font-weight: 400;
+    src: url("./assets/fonts/Dosis/Dosis-Regular.ttf") format('truetype');
+  }
+  @font-face {
+    font-family: "Dosis", serif;
+    font-style: normal;
+    font-weight: 500;
+    src: url("./assets/fonts/Dosis/Dosis-Medium.ttf") format('truetype');
+  }
+  @font-face {
+    font-family: "Dosis", serif;
+    font-style: normal;
+    font-weight: 600;
+    src: url("./assets/fonts/Dosis/Dosis-SemiBold.ttf") format('truetype');
+  }
+  @font-face {
+    font-family: "Dosis", serif;
+    font-style: normal;
+    font-weight: 700;
+    src: url("./assets/fonts/Dosis/Dosis-Bold.ttf") format('truetype');
+  }
+  @font-face {
+    font-family: "Dosis", serif;
+    font-style: normal;
+    font-weight: 300;
+    src: url("./assets/fonts/Dosis/Dosis-Light.ttf") format('ttf');
+  }
+
+  section {
+    @apply mt-10;
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply text-green-500 font-extralight text-5xl font-dosis uppercase;
+  }
+}
